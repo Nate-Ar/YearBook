@@ -1,8 +1,9 @@
 # Online Year Book
 ## Geting Started
 First, make sure you have python3 installed<br>
-Second, Donwload the files and run the python file `python3 page.py`<br>
-Third, go to `http://localhost:5000/` in your browser
+Second, install Flask using pip `pip3 install flask`
+Third, Donwload the files and run the python file `python3 page.py`<br>
+Fourth, go to `http://localhost:5000/` in your browser
 ## Editing The page
 To Change the People in yor year book navigate to the static folder and open the `2020.csv` file<br>
 The syntax is `Full_Name,Img,Quote`. Add your images to the images folder also located in the static folder <br>
