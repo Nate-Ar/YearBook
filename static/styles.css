@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: rgba(52,85,201,1);
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-size:30px;
+}
+aside{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.info{
+    text-align: left;
+    margin-top: 2%;
+    background-color: #303030;
+    color: white;
+    border-radius: 9px;
+    width: 300px;
+
+}
+.inner{
+    margin-left: 2%;
+    margin-top: 1%;
+    padding-bottom: 2%;
+}
+.name{
+
+    padding: 2%;
+    border-radius: 9px 9px 0px 0px;
+    background-color: rgba(52,85,201,1);
+}
+img{
+    width: 30%;
+}
+.quote{
+    float: right;
+    margin-right: 35%;
+}
+.contain{
+    width: 70%;
+}
