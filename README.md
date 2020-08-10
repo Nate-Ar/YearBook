@@ -1,7 +1,7 @@
 # Online Year Book
 ## Geting Started
 First, make sure you have python3 installed<br>
-Second, install Flask using pip `pip3 install flask`
+Second, install Flask using pip `pip3 install flask`<br>
 Third, Donwload the files and run the python file `python3 page.py`<br>
 Fourth, go to `http://localhost:5000/` in your browser
 ## Editing The page
