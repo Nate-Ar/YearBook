@@ -12,3 +12,4 @@ To change what year populates the page after your click a button go to the `page
 You can add a year by creating a csv file and adding `Full_Name,Img,Quote,Year` at the top of the file and the range the `whaty` varable will still start at 0 but add 1 for every file you add<br>
 You Have to stop the program and restart it for the changes to take place<br>
 In the future the `whaty` varable will change automatically 
+#### You can disregard the `test.py` file
