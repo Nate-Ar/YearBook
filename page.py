@@ -6,19 +6,36 @@ PEOPLE_FOLDER = os.path.join('static','images')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 content = []
+ylist = []
+whaty = 2
 
 
-def readb():
-    with open('static/2020.csv', 'r') as g:
+def readb(year):
+    with open('static/Years/' + year + '.csv', 'r') as g:
         csv_reader = csv.DictReader(g)
         for line in csv_reader:
             content.append(line)
 
 
-readb()
+def listyears():
+    arr = os.listdir('static/Years')
+    for line in arr:
+        back = line[len(line)::-1]
+        fixed = back[4:len(back)]
+        forward = fixed[len(fixed)::-1]
+        ylist.append(forward)
+
+listyears()
 @app.route('/')
 def home():
-    return render_template("home.html", content=content)
+    return render_template("home.html", years=ylist)
+
+
+@app.route('/year')
+def year():
+    year = ylist[whaty]
+    readb(str(year))
+    return render_template("year.html", content=content)
 
 
 if __name__ == '__main__':

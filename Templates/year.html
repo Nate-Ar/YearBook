@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block people %}
+    <center>
+        <aside class="contain">
+            {% for x in content %}
+            <div class="info">
+                <h3 class="name">{{x.Full_Name}}</h3>
+                <div class="inner">
+                    <img src = "{{ url_for('static', filename=x.Img)}}">
+                    <h4 class="quote">{{x.Quote}}</h4>
+                </div>
+            </div>
+            {% endfor %}
+        </aside>
+    </center>
+{% endblock people %}

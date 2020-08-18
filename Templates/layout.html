@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/year.css">
+    <meta charset="UTF-8">
+        <title>Yearbook - {{content[0].Year}}</title>
+</head>
+<header>
+    <h1>Year of {{content[0].Year}}</h1>
+</header>
+<body>
+    {% block people %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: rgba(52,85,201,1);
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-size:30px;
+}
+
+aside{
+    text-align: center;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+a{
+    color: rgba(52,85,201,1);
+    font-size: 100px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}

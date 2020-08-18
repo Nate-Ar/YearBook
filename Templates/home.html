@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/home.css">
     <meta charset="UTF-8">
-    {% if title%}
-        <title>Yearbook - {{title}}</title>
-    {% else %}
-        <title>Yearbook - OverView</title>
-    {% endif%}
-    <title>Yearbook</title>
+    <title>Yearbooks</title>
 </head>
 <header>
     <h1>Yearbooks</h1>
 </header>
 <body>
-<center>
-    <aside class="contain">
-        {% for x in content %}
-        <div class="info">
-            <h3 class="name">{{x.Full_Name}}</h3>
-            <div class="inner">
-                <img src = "{{ url_for('static', filename=x.Img)}}">
-                <h4 class="quote">{{x.Quote}}</h4>
-            </div>
-        </div>
+    <aside>
+        {% for year in years %}
+            <a href ="year">{{year}}</a>
         {% endfor %}
     </aside>
-    </center>
 </body>
 </html>
