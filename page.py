@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 import os
 import csv
-import time
 PEOPLE_FOLDER = os.path.join('static','images')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
