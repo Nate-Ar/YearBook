@@ -13,4 +13,4 @@ You can add a year by creating a csv file and adding `Full_Name,Img,Quote,Year` 
 You Have to stop the program and restart it for the changes to take place<br>
 In the future the `whaty` varable will change automatically 
 #### `test.py` File
-In the `test.py` file you will find a for statment that prints out all of the year.csv files and this is a possable solution to automating the changing of the `whaty` varable
+In the `test.py` file you will find a for statment that prints out all of the year.csv files and thi is a possable solution to automating the changing of the `whaty` varable
