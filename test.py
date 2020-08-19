@@ -1,12 +1,15 @@
 import os
-ylist = []
-
+years = []
+whaty = 0
 
 def listyears():
     arr = os.listdir('static/Years')
     for line in arr:
-        ylist.append(line)
+        years.append(line)
 
 
 listyears()
-print(ylist)
+for year in years:
+    on = years.index(year)
+    year = years[on]
+    print(str(year))

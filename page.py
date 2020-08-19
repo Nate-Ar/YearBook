@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 content = []
 ylist = []
-whaty = 2
+whaty = 0
 
 
 def readb(year):
@@ -25,16 +25,17 @@ def listyears():
         forward = fixed[len(fixed)::-1]
         ylist.append(forward)
 
+
 listyears()
 @app.route('/')
 def home():
-    return render_template("home.html", years=ylist)
+    return render_template("home.html", years=ylist, on=whaty)
 
 
+year = ylist[whaty]
+readb(str(year))
 @app.route('/year')
 def year():
-    year = ylist[whaty]
-    readb(str(year))
     return render_template("year.html", content=content)
 
 
