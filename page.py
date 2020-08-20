@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 import os
 import csv
-import time
 PEOPLE_FOLDER = os.path.join('static','images')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
@@ -10,6 +9,7 @@ ylist = []
 whaty = 0
 
 
+# Reading CSV File
 def readb(year):
     with open('static/Years/' + year + '.csv', 'r') as g:
         csv_reader = csv.DictReader(g)
@@ -17,6 +17,7 @@ def readb(year):
             content.append(line)
 
 
+# Getting a the list of csv files and taking the .csv off for ease of readability
 def listyears():
     arr = os.listdir('static/Years')
     for line in arr:
@@ -26,14 +27,18 @@ def listyears():
         ylist.append(forward)
 
 
+# Home Page
 listyears()
 @app.route('/')
 def home():
     return render_template("home.html", years=ylist, on=whaty)
 
 
+# Converting whaty into a file name
 year = ylist[whaty]
 readb(str(year))
+
+# Year Page
 @app.route('/year')
 def year():
     return render_template("year.html", content=content)

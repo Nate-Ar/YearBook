@@ -1,16 +1,31 @@
+<!-- Adding the html from layout.html -->
 {% extends "layout.html" %}
+
+<!-- Start of Dynamic html -->
 {% block people %}
     <center>
         <aside class="contain">
+
+            <!-- Star of for loop -->
             {% for x in content %}
             <div class="info">
+
+                <!-- Printing Name from the content variable-->
                 <h3 class="name">{{x.Full_Name}}</h3>
                 <div class="inner">
+
+                    <!--Showing image from the content variable-->
                     <img src = "{{ url_for('static', filename=x.Img)}}">
+
+                    <!--Printing quote from the content variable-->
                     <h4 class="quote">{{x.Quote}}</h4>
                 </div>
             </div>
+
+            <!-- End of for loop-->
             {% endfor %}
         </aside>
     </center>
+
+<!-- End of Dynamic code -->
 {% endblock people %}
