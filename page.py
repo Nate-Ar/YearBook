@@ -1,3 +1,7 @@
+# Creator: Nathan A
+# Description: Does your vocab for you
+# Creation Date: 8/9/2020
+# Update Date: 8/19/2020
 from flask import Flask, render_template
 import os
 import csv
