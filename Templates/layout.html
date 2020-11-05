@@ -6,9 +6,15 @@
         <title>Yearbook - {{content[0].Year}}</title>
 </head>
 <header>
+
+    <!-- Printing the year from the content variable-->
     <h1>Year of {{content[0].Year}}</h1>
 </header>
 <body>
+
+    <!-- Start of static code-->
     {% block people %}{% endblock %}
+    <!-- End of static code-->
+
 </body>
 </html>
