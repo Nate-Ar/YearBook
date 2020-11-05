@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 content = []
 ylist = []
-whaty = 0
+whaty = 3
 
 
 def readb(year):

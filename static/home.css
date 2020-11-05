@@ -1,6 +1,9 @@
 *{
     margin: 0;
 }
+body{
+    background-color: #303030;
+}
 header{
     background-color: rgba(52,85,201,1);
     color: white;
